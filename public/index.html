@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Portfolio // Dark Standard Edition</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <!-- Top Navigation Header -->
+  <header class="site-header">
+    <div class="container navbar">
+      <div style="display: flex; align-items: center; gap: 14px;">
+        <a href="/" class="brand">DEV<span>PORTFOLIO</span>_</a>
+        <span class="status-pill"><span class="status-dot"></span> 2026-27 ACTIVE</span>
+      </div>
+      <nav class="nav-links">
+        <a class="nav-link active" href="/">Home</a>
+        <a class="nav-link" href="#projects">Work & Skills</a>
+        <a class="nav-link" href="/manager.html">Console</a>
+        <span id="authActionBox">
+          <button class="nav-btn" id="logoutBtn" type="button">Logout</button>
+        </span>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero / Identity Section (Split View) -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <!-- Left: Student Terminal Identity Card -->
+      <div class="identity-card">
+        <div class="window-header">
+          <span class="dot dot-red"></span>
+          <span class="dot dot-yellow"></span>
+          <span class="dot dot-green"></span>
+          <span class="window-title">profile.json — student-session</span>
+        </div>
+        <div class="identity-body">
+          <div class="identity-header">
+            <div class="avatar-badge" id="avatarBadge">--</div>
+            <div class="name-box">
+              <h1 id="dispName">—</h1>
+              <div class="roll-tag">ID: <span id="dispRoll">—</span></div>
+            </div>
+          </div>
+          <table class="meta-table">
+            <tbody>
+              <tr>
+                <td>Program / Course</td>
+                <td id="dispCourse">—</td>
+              </tr>
+              <tr>
+                <td>Institution</td>
+                <td id="dispInstitution">—</td>
+              </tr>
+              <tr>
+                <td>Contact Email</td>
+                <td id="dispEmail">—</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Right: Live Metrics & Bio Widget -->
+      <div class="metrics-card">
+        <div>
+          <div class="metrics-title">SYSTEM METRICS // OVERVIEW</div>
+          <div class="stats-grid">
+            <div class="stat-box">
+              <div class="stat-num" id="statProjects">0</div>
+              <div class="stat-label">Projects</div>
+            </div>
+            <div class="stat-box">
+              <div class="stat-num" id="statSkills">0</div>
+              <div class="stat-label">Core Skills</div>
+            </div>
+            <div class="stat-box">
+              <div class="stat-num" id="statAcademic">0</div>
+              <div class="stat-label">Academic</div>
+            </div>
+            <div class="stat-box">
+              <div class="stat-num" id="statCerts">0</div>
+              <div class="stat-label">Certs</div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="bio-box">
+            <strong>Candidate Statement:</strong>
+            <p id="dispBio" style="margin-top: 4px;">—</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Filter & Search Toolbar -->
+  <section class="toolbar-section" id="projects">
+    <div class="container">
+      <div class="toolbar">
+        <div class="filter-pills" id="categoryFilters">
+          <button class="pill-btn active" data-cat="ALL">All Items (<span id="countAll">0</span>)</button>
+          <button class="pill-btn" data-cat="Project">Projects (<span id="countProj">0</span>)</button>
+          <button class="pill-btn" data-cat="Skill">Skills (<span id="countSkill">0</span>)</button>
+          <button class="pill-btn" data-cat="Academic">Academic (<span id="countAcad">0</span>)</button>
+          <button class="pill-btn" data-cat="Certification">Certs (<span id="countCert">0</span>)</button>
+        </div>
+        <div class="search-wrapper">
+          <input type="text" id="searchInput" class="search-input" placeholder="Search entries, keywords, stack...">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio Records Grid -->
+  <section class="portfolio-grid-section">
+    <div class="container">
+      <div class="cards-grid" id="cardsGrid">
+        <!-- Rendered dynamically via script.js -->
+        <div class="empty-state">
+          <h3>Loading portfolio entries...</h3>
+          <p>Connecting to database.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <strong id="footName">—</strong> (<span id="footRoll">—</span>) &bull;
+        <span id="footInstitution">—</span>
+      </div>
+      <div>&copy; 2026-2027 Student Portfolio. All Rights Reserved.</div>
+    </div>
+  </footer>
+
+</body>
+</html>
